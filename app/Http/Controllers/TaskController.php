@@ -24,6 +24,12 @@ class TaskController extends Controller
         //dd($request->all());
     }
 
+    public function task(){
+        $data = task::all();
+
+        return view('task')->with('tasks',$data);
+    }
+
     public function taskCompleted($id){
         $task = task::find($id);
         $task->complete=1;

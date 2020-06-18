@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Auth\Events\Logout;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Auth;
 
 use function Ramsey\Uuid\v1;
@@ -44,8 +45,6 @@ class UserController extends Controller
         if(Auth::attempt($data)){
             return  view('home');
 
-            // $id = Auth::id();
-            // $request->session()->put('uid',$id);
         }
         return redirect()->back();
     }

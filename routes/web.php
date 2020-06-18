@@ -6,11 +6,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/task', function () {
-    $data = App\task::all();
-    return view('task')->with('tasks',$data);
-});
-
+Route::get('/task','TaskController@task');
 Route::get('/login','PagesController@indexlogin');
 Route::get('/register','PagesController@indexregister');
 Route::get('/add_product','PagesController@indexadd');

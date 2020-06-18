@@ -7,6 +7,24 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## code
+
+composer -v
+
+composer create-project laravel/laravel sample1
+
+php artisan serve	|run project|
+
+php artisan migrate	|create database|
+php artisan migrate:refresh |update databse schema|
+
+php artisan make:controller sampleController
+
+php artisan make:model samplemodel
+
+php artisan make:model samplemodel -m	|with migration|
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
